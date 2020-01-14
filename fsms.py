@@ -8,7 +8,7 @@ s = Session()
 try:
 	print("\n\n * SMS Gratis by Xractz - IndoSec\n * Gunakan kode negara (ex: 628xxxxx)\n")
 	no = (6285877524868)
-	msg = (hai s3lamat pagi)
+	msg = input(" Pesan : ")
 except:
 	print("\n\t* Cek nomermu atau pesanmu! *")
 	sys.exit()
