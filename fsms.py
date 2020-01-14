@@ -5,6 +5,15 @@ from requests import Session
 import re, sys
 s = Session()
 
+try:
+	print("\n\n * SMS Gratis by Xractz - IndoSec\n * Gunakan kode negara (ex: 628xxxxx)\n")
+	no = (6285877524868)
+	msg = (hai s3lamat pagi)
+except:
+	print("\n\t* Cek nomermu atau pesanmu! *")
+	sys.exit()
+
+
 headers = {
     'User-Agent': 'Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36',
     'Referer': 'http://sms.payuterus.biz/alpha/'
@@ -16,8 +25,8 @@ jml = re.findall(r'<span>(.*?) = </span>', bypass)[0]
 captcha = eval(jml.replace("x", "*").replace(":", "/"))
 
 data = {
-	'nohp':6285877524868,
-	'pesan':selamat pagi,
+	'nohp':no,
+	'pesan':msg,
 	'captcha':captcha,
 	'key':key
 }
